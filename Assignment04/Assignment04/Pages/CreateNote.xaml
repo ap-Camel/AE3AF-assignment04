@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment04.Pages.CreateNote"
+             Title="Create Note">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid RowSpacing="10" ColumnSpacing="10" Margin="7">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Title" VerticalOptions="Center"
+                       TextColor="LightGray" FontSize="Small"/>
+
+                <Entry x:Name="Title" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                       VerticalOptions="Center" FontSize="Large" TextColor="Black" 
+                       FontAttributes="Bold" BackgroundColor="LightGray"/>
+
+                <Label Grid.Row="2" Grid.Column="0" Text="Details" VerticalOptions="Center"
+                       TextColor="Aqua" FontSize="Small"/>
+
+                <Editor x:Name="Details" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+                        VerticalOptions="Center" FontSize="Medium" TextColor="Black" 
+                        HeightRequest="200" BackgroundColor="Aqua" />
+
+                <Label Grid.Row="4" Grid.Column="0" Text="Date" VerticalOptions="Center"
+                       TextColor="Aqua" FontSize="Small"/>
+
+                <DatePicker x:Name="DatePicker" Grid.Row="5" VerticalOptions="Center"/>
+
+                <Label Grid.Row="6" Grid.Column="0" Text="Completed" VerticalOptions="Center"
+                       TextColor="OrangeRed" FontSize="Small"/>
+
+                <Switch Grid.Row="6" Grid.Column="1" OnColor="Orange" HorizontalOptions="Center"
+                        VerticalOptions="Center" x:Name="Switch"/>
+
+                <ImageButton Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" 
+                             Source="button_create" Aspect="AspectFit" BackgroundColor="Transparent"
+                             x:Name="ImageButton" Clicked="ImageButton_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment04.Pages.NoteDetails"
+             Title="Note Details">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid RowSpacing="10" ColumnSpacing="10" Margin="7">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="lblTitile" Grid.Row="0" Grid.Column="0" Text="Titile" 
+                       FontSize="Large" FontAttributes="Bold" TextColor="Black" 
+                       BackgroundColor="LightGray" Grid.ColumnSpan="2"/>
+
+                <Label x:Name="lblDetails" Grid.Row="1" Grid.Column="0" Text="Details" 
+                       FontSize="Medium" TextColor="Black" BackgroundColor="Aqua" 
+                       Grid.ColumnSpan="2"/>
+
+                <Label x:Name="lblDate" Grid.Row="2" Grid.Column="0" Text="Date"/>
+
+                <Label x:Name="lblStatus" Grid.Row="2" Grid.Column="1" Text="Status"/>
+
+                <Button x:Name="btnSend" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" 
+                        BackgroundColor="LightBlue" TextColor="Black" FontSize="Large"
+                        Text="Send" CornerRadius="7" Clicked="btnSend_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
